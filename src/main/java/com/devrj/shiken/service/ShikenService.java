@@ -15,6 +15,9 @@ public class ShikenService {
 		
 		String fileName = "java_questions.json";
 		ClassLoader classLoader = ClassLoader.getSystemClassLoader();
+		System.out.println("classLoader : "+classLoader);
+		System.out.println("Resource : "+classLoader.getResource(fileName));
+		
         File file = new File(classLoader.getResource(fileName).getFile());
         
         //File is found
