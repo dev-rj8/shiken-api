@@ -1,0 +1,14 @@
+[
+{
+	id : 1,
+	question : "Is null a keyword in Java?",
+	options : ["Yes", "No"]
+},
+{
+	id : 2,
+	question : "Is Constructor inherited?",
+	options : ["Yes", "No"]
+}
+
+
+]
