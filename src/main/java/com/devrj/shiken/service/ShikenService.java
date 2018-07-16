@@ -18,7 +18,7 @@ public class ShikenService {
 		System.out.println("classLoader : "+classLoader);
 		System.out.println("Resource : "+classLoader.getResource(fileName));
 		
-        File file = new File(classLoader.getResource(fileName).getFile());
+        File file = new File(ClassLoader.getSystemResource(fileName).getFile());
         
         //File is found
         System.out.println("File Found : " + file.exists());
