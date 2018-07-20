@@ -1,7 +1,10 @@
 package com.devrj.shiken.model;
 
+import org.springframework.data.annotation.Id;
+
 public class Question {
 	
+	@Id
 	int id;
 	String question;
 	

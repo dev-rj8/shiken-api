@@ -1,6 +1,11 @@
 package com.devrj.shiken.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "shiken")
 public class MultiOptionQuestion extends Question{
+	
+	
 	
 	private String[] options;
 

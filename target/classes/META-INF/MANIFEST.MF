@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: shiken
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: ramra
+Built-By: rjakkani001
 Implementation-Vendor-Id: com.devrj
-Build-Jdk: 1.8.0_144
+Build-Jdk: 1.8.0_161
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/shiken
 Created-By: Maven Integration for Eclipse
