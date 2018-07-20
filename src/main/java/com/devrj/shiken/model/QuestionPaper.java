@@ -7,6 +7,8 @@ public class QuestionPaper {
 	
 	private String id;
 	
+	private String paperName;
+	
 	private MultiOptionQuestion questions[];
 	
 
@@ -24,6 +26,14 @@ public class QuestionPaper {
 
 	public void setQuestions(MultiOptionQuestion[] questions) {
 		this.questions = questions;
+	}
+
+	public String getPaperName() {
+		return paperName;
+	}
+
+	public void setPaperName(String paperName) {
+		this.paperName = paperName;
 	}
 	
 
