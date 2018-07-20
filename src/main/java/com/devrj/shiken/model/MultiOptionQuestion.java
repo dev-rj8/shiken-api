@@ -11,4 +11,9 @@ public class MultiOptionQuestion extends Question{
 	public void setOptions(String[] options) {
 		this.options = options;
 	}
+	
+	@Override
+	public String toString() {
+		return question+ "   options : "+options;
+	}
 }

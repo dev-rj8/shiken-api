@@ -1,31 +1,40 @@
 package com.devrj.shiken.service;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.devrj.shiken.model.QuestionPaper;
+import com.devrj.shiken.model.User;
+import com.devrj.shiken.repository.QuestionPaperRepository;
+import com.devrj.shiken.repository.UserRepository;
 
 @RestController
 public class ShikenService {
 	
+	@Autowired
+	private UserRepository repository;
+	
+	@Autowired
+	private QuestionPaperRepository paperRepository;
+	
 	@RequestMapping("/questions")
  	public String getQuestions() throws IOException {
 		
-// 		String fileName = "java_questions.json";
-// 		ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-// 		System.out.println("classLoader : "+classLoader);
-// 		System.out.println("Resource : "+classLoader.getResource(fileName));
+		List<User> users =  repository.findAll();
 		
-//         File file = new File(ClassLoader.getSystemResource(fileName).getFile());
-        
-//         //File is found
-//         System.out.println("File Found : " + file.exists());
-        
-//         //Read File Content
-//         String content = new String(Files.readAllBytes(file.toPath()));
-// 		return content;	
+		for(User u : users) {
+			System.out.println(u.getFirstname() + ", "+ u.getLastname());
+		}
+		
+		List<QuestionPaper> papers =  paperRepository.findAll();
+		
+		for(QuestionPaper qp : papers) {
+			System.out.println(qp.getQuestions());
+		}
 		
 		return "[ { 	id : 1, 	question : 'Is null a keyword in Java?', 	options : ['Yes', 'No'] }, { 	id : 2, 	question : 'Is Constructor inherited?', 	options : ['Yes', 'No'] }   ]";
  	}
