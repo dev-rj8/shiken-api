@@ -33,14 +33,17 @@ public class ShikenService {
 		
 		List<QuestionPaper> papers =  paperRepository.findAll();
 		
+		String output = "List of Courses : \n";
 		for(QuestionPaper qp : papers) {
 			System.out.println("Paper Name : " + qp.getPaperName());
+			output += qp.getPaperName();
 			for(MultiOptionQuestion q :  qp.getQuestions()) {
 				System.out.println(q);				
+				output += q;
 			}
 		}
 		
-		return "[ { 	id : 1, 	question : 'Is null a keyword in Java?', 	options : ['Yes', 'No'] }, { 	id : 2, 	question : 'Is Constructor inherited?', 	options : ['Yes', 'No'] }   ]";
+		return output;
  	}
 	
 }

@@ -1,5 +1,7 @@
 package com.devrj.shiken.model;
 
+import java.util.Arrays;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "shiken")
@@ -19,6 +21,6 @@ public class MultiOptionQuestion extends Question{
 	
 	@Override
 	public String toString() {
-		return question+ "   options : "+options;
+		return question+ "   options : "+ Arrays.toString(options);
 	}
 }
